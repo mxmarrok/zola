@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <title>Asher's Site</title>
+    <link
+      rel="icon"
+      href="{{ resize_image(path='/images/wolf-poly3.webp', width=256, height=256, format='webp') | get(key='url') }}"
+    />
+  </head>
+
+  <body data-theme="marrok">
+    <script src="/js/theme.js" defer></script>
+    {% block body %}{% endblock %}
+  </body>
+</html>
