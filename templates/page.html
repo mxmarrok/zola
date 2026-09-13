@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block body %}
 
 <header class="site-header" aria-labelledby="site-title">
-  <h1 id="site-title">{{ zola.title }}</h1>
+  <h1 id="site-title">{{ config.title }}</h1>
   <nav class="top-nav">
     <a href="/">Home</a>
     <a href="/blog">Blog</a>
@@ -13,11 +13,11 @@
 <main>{% block content %}{% endblock %}</main>
 <footer class="page-footer">
   <span>
-    &copy; {{ zola.author }} {{ zola.extra.copyright_years }}.
+    &copy; {{ config.author }} {{ config.extra.copyright_years }}.
     <a href="https://codeberg.org/mxasher/zolasite" target="_blank">Source</a>.
     Unless otherwise specified, the works on this blog are licensed under
     <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"
-      >{{ zola.extra.license_name }}</a
+      >{{ config.extra.license_name }}</a
     >. Any reproduction must include all original content, artwork, and context.
     Partial or altered copies violate the license.
   </span>
