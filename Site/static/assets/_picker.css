@@ -1,0 +1,32 @@
+/*
+ * Only show the theme picker when JS is enabled. This style is overwritten in
+ * the JS when it loads.
+ */
+#theme-picker {
+  display: none;
+}
+
+#theme-picker ul.tag-list {
+  justify-content: center;
+}
+
+#theme-picker ul button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+#theme-picker ul button:not(.current-tag) {
+  color: var(--color-clickable);
+}
+
+#theme-picker ul button:hover {
+  text-decoration-thickness: 3px;
+  background-color: var(--color-clickable);
+  color: var(--color-bg);
+}

@@ -1,0 +1,41 @@
+:root {
+  --selected-arrows-offset: 1.5em;
+}
+
+header.site-header {
+  color: var(--color-heading);
+  margin-bottom: 3rem;
+  font-size: 30px;
+}
+
+@media (max-width: 640px) {
+  header {
+    margin-bottom: 2rem;
+  }
+}
+
+nav.top-nav {
+  display: flex;
+  font-family: var(--font-Euro);
+  flex-wrap: wrap;
+  row-gap: var(--selected-arrows-offset);
+  column-gap: var(--flow-list-column-gap);
+  justify-content: center;
+  align-items: center;
+}
+
+#site-title {
+  text-align: center;
+}
+
+header nav a {
+  position: relative;
+}
+
+header nav a.active::after {
+  content: "^^^";
+  color: var(--color-yellow);
+  position: absolute;
+  left: calc(50% - (3ch / 2));
+  bottom: calc(var(--selected-arrows-offset) * -1);
+}

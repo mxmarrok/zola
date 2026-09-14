@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block body %}
+
+<header class="site-header" aria-labelledby="site-title">
+  <h1 id="site-title">{{ config.title }}</h1>
+  <nav class="top-nav">
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/cookbook">Cookbook</a>
+    {% set linktree = get_page(path='linktree.md') | get(key='path') %}
+    <a href="{{ get_url(path='@/linktree.md') }}">Contact</a>
+  </nav>
+</header>
+<main>{% block content %}{% endblock %}</main>
+<footer class="page-footer">
+  <span>
+    &copy; {{ config.author }} {{ config.extra.copyright_years }}.
+    <a href="https://codeberg.org/mxasher/zolasite" target="_blank">Source</a>.
+    Unless otherwise specified, the works on this blog are licensed under
+    <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"
+      >{{ config.extra.license_name }}</a
+    >. Any reproduction must include all original content, artwork, and context.
+    Partial or altered copies violate the license.
+  </span>
+</footer>
+{% endblock %}

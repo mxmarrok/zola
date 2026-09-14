@@ -1,0 +1,35 @@
+.post-body {
+  text-align: justify;
+  border: 1px solid var(--color-fg);
+  padding: 1.5rem;
+}
+
+/*
+ * Justified text looks bad on narrow screens and the left/right borders take
+ * up too much horizontal space.
+ */
+@media (max-width: 640px) {
+  .post-body {
+    text-align: left;
+    border: none;
+    border-top: 1px solid var(--color-fg);
+    padding: 0;
+    padding-top: 1lh;
+  }
+}
+
+/*
+ * Headings in posts should always start at <h2>, because <h1> is already used
+ * for the post title, and we need to make sure we follow a semantic heading
+ * structure. Note that while we're *also* using <h1> for the site title, the
+ * heading structure should "reset" within an <article> because it's meant to
+ * serve as a standalone piece of content.
+ */
+
+h1#post-title {
+  /*
+   * Make this <h1> look like an <h2> so it looks consistent within the context
+   * of the full page with the <h1> site title.
+   */
+  font-size: var(--font-size-h2);
+}

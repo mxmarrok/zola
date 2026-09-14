@@ -1,0 +1,17 @@
+/* 
+ * Monofur font type
+ */
+
+@font-face {
+  font-family: Monofur;
+  src: url("/font/MonofurNerdFont-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Monofur;
+  src: url("/font/MonofurNerdFont-Italic.ttf");
+  font-style: italic;
+  font-weight: normal;
+}
